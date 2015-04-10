@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+<head>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style/site.css">
+</head>
+
+<body ng-controller="ProductsController">
+    
+        
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="style/reset.css">
+        <link rel="stylesheet" href="style/style.css">
+        <script src="angular/angular.min.js"></script>
+        <script src="angular/angular-route.min.js"></script>
+	<script src="app.module.js"></script>
+	<script src="products/products.controller.js"></script>
+	<script src="products/product.controller.js"></script>
+	<script src="products/products.service.js"></script>
+	<script src="cart/cart.controller.js"></script>
+	<script src="cart/cart.service.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+    
+    
+	<h1><a class="navbar-brand navItem" href="#/">Super Awesome Movie Store</a></h1>
+           
+           <a class="navbar-brand navItem" href="admin.html">Admin</a>
+        
+        <br>
+
+	<div class="container" ng-controller="CartController">
+		<div ng-view></div>
+	</div>
+
+	
+</body>
+</html>

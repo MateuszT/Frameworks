@@ -1,0 +1,59 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2015-02-24, 22:48:25
+    Author     : Edi800
+*/
+
+
+
+.brandsFilter {
+	margin-right: 20px;
+}
+
+
+.btn{
+    position: relative;
+  left: 50px;
+  border-radius: 0px;
+  background-color: #A3CC7A;
+  border-color: #A3CC7A;
+  padding: 10px 30px 10px 30px;
+  font-family: 'Slabo 27px', serif;
+  font-size: 15px;
+}
+
+.btn:hover{
+  background-color: #9DC28B;
+  border-color: #9DC28B;  
+}
+
+.table{
+  font-family: 'PT Sans', sans-serif;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+  line-height: 25px;
+}
+
+.navbar{
+    font-family: 'PT Sans', sans-serif;
+    
+}
+
+.form-control{
+    border-radius: 0px;
+}
+
+.ng-submit{
+    
+}
+
+.badge{
+    background-color: #ffffff;
+    color: #000; 
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html  ng-app="myApp">
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <h1><a class="navbar-brand navItem" href="index.html">Super Awesome Movie Store</a></h1>
+    <div class="container" ng-controller="AppCtrl">
+        
+   
+   
+
+    <h1>Admin panel</h1>
+    <a ng-href="/">
+          <input type="button" class="btn btn-info" value="BACK" />
+      </a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Movie type</th>
+                 <th>Director</th>
+                 <th>Description</th>
+                 <th>Image link</th>
+                 <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+<td><input class="form-control" ng-model="list.name"></td>
+<td><input class="form-control" ng-model="list.price"></td>
+<td><input class="form-control" ng-model="list.movietype"></td>
+<td><input class="form-control" ng-model="list.director"></td>
+<td><input class="form-control" ng-model="list.description"></td>
+<td><input class="form-control" ng-model="list.imagelink"></td>
+<td><button class="btn btn-primary" ng-click="addList()">Add Movie</button></td>
+<td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
+     <br>
+    <button class="btn btn-info" ng-click="deselect()">Clear</button></td>
+
+</tr>
+            <tr ng-repeat="list in movieList2">
+<td>{{list.name}}</td>
+<td>{{list.price}}</td>
+<td>{{list.movietype}}</td>
+<td>{{list.director}}</td>
+<td>{{list.description}}</td>
+<td>{{list.imagelink}}</td>
+ <td><button class="btn btn-danger" ng-click="remove(list._id)">Remove</button></td>
+<td><button class="btn btn-warning" ng-click="edit(list._id)">Edit</button></td>
+ 
+        </tbody>
+    </table>
+	 </div>
+       
+    
+    
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>	
+        <script src="controllers/controller.js"></script>	
+</body>
+</html>

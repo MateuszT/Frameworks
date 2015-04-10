@@ -1,0 +1,71 @@
+
+
+<div class="col-md-12">
+	<div class="col-md-5 pull-right">
+		<ul class="list-inline">
+			<li><a ng-click="showCart = !showCart">Shopping cart:</a> <span class="badge">{{cartCount}}</span></li>
+			
+			<li><a href="#/checkout"><button class="btn btn-primary">Checkout</button></a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="row" ng-show="showCart">
+	<div class="col-md-12">
+		<h2>Shopping Cart</h2>
+		<br />
+		<table class="table">
+			<tr>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Price per item</th>
+				<th>Total price</th>
+			</tr>
+			<tr ng-repeat="cartProduct in cartProducts">
+				<td>{{cartProduct.product.name}}</td>
+				<td>{{cartProduct.quantity}}</td>
+				<td>{{cartProduct.product.price}}</td>
+				<td>{{cartProduct.product.price * cartProduct.quantity}}</td>
+				<td><input type="button" value="Cancell Order" onclick="CancellOrder(this)"/></td>
+				
+                                
+			</tr>
+		</table>
+		<hr />
+	</div>
+</div>
+
+
+    
+    <div class="row">
+	<div class="col-md-6 form-group">
+		<input type="text" class="form-control" placeholder="Search movies" ng-model="productName">
+	</div>
+	<div class="col-md-6 form-group">
+		<ul class="list-inline">
+			<li ng-repeat="movietype in movietypes">
+			    <input type="checkbox" ng-click="movietypeChange(movietype.movietype)"> {{ movietype.movietype }}
+			</li>
+		</ul>
+	</div>
+</div>
+    
+
+<div class="row">
+<div class="row-same-height">
+        <div class="col-md-4 col-md-height" ng-repeat="product in products | filter:productName | filter:movietypeFilter">
+            <p><a ng-href= "#/product/{{product.name}}" class="thumb"><img src="{{ product.imagelink }}" height="300"/></a></p>
+            <p>{{ product.movietype }}:<a ng-href="#/product/{{product.name}}"> {{ product.name }} </p></a>
+                <p>Price: {{ product.price }}</p>
+                <p>
+                        <form ng-submit="addToCart(product)">
+                                Quantity: <input type="number" ng-model="quantity" min="1" />
+                                <br /><br />
+                                <button type="submit" class="btn btn-danger">Buy</button>
+                        </form>
+
+                <br /> <hr />
+        </div>
+</div>
+</div>
